@@ -12,9 +12,9 @@ import (
 //A sleep is added to simulate work done and more importantly to see what difference a buffered and a non-buffered channel makes.
 //Observe the print statements added.
 
-// The sender and receiver are now using a non-buffered channel. The sender will benefit from this because the receiver is slow. (time delay of 3 seconds)
+// The sender and receiver are now using a non-buffered channel. The sender will not benefit from this because the receiver is slow. (time delay of 3 seconds)
 //It simulates a scenario where sender is fast but consumer is slow and having non-buffered channel for the sender, might not be a good idea.
-//This is a buffered channel example , so the sender will have dump all the data at once , it wont wait for the receiver to pull out data from channel.
+//This is a non-buffered channel example , so the sender will have dump all the data at once , it wont wait for the receiver to pull out data from channel.
 func main() {
 
 	start := time.Now()
